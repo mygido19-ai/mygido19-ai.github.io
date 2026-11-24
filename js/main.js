@@ -20,8 +20,6 @@
   var activeFilter = "all";
   var visibleProjects = projects.slice();
 
-  function pad(n) { return n < 10 ? "0" + n : String(n); }
-
   function cardHTML(p) {
     return (
       '<article class="card reveal" data-category="' + p.category + '" data-id="' + p.id + '">' +
@@ -31,7 +29,6 @@
             '<img src="' + p.thumb + '" alt="' + p.title + ' 썸네일" loading="lazy" decoding="async" width="800" height="800">' +
           "</div>" +
           '<div class="card-body">' +
-            '<span class="card-no">' + pad(p.no) + "</span>" +
             "<div>" +
               '<h3 class="card-title">' + p.title + "</h3>" +
               '<p class="card-sub"><span class="card-cat">' + CATS[p.category] + "</span> · " + p.subtitle + "</p>" +
@@ -77,9 +74,6 @@
         card.classList.add("is-hidden");
       }
     });
-
-    var count = $("#visibleCount");
-    if (count) count.textContent = visibleProjects.length;
 
     updateNav();
   }
@@ -140,8 +134,7 @@
       "<div><dt>Category</dt><dd>" + CATS[p.category] + "</dd></div>" +
       "<div><dt>Type</dt><dd>" + p.subtitle + "</dd></div>" +
       "<div><dt>Tools</dt><dd>" + p.tools.join(" · ") + "</dd></div>" +
-      "<div><dt>Participation</dt><dd>" + p.participation + "</dd></div>" +
-      "<div><dt>No.</dt><dd>" + pad(p.no) + " / " + pad(projects.length) + "</dd></div>"
+      "<div><dt>Participation</dt><dd>" + p.participation + "</dd></div>"
     );
   }
 

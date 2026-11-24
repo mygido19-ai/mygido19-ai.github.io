@@ -407,7 +407,7 @@ window.PORTFOLIO = [
     "no": 23,
     "id": "6031952",
     "category": "brand",
-    "title": "MOJELIM 리얼스토리 책자",
+    "title": "브랜드 리얼스토리 책자",
     "subtitle": "책자",
     "tools": [
       "AI",
@@ -422,7 +422,7 @@ window.PORTFOLIO = [
       "images/6031952-3.jpg",
       "images/6031952-4.jpg"
     ],
-    "description": "MOJELIM 리얼스토리 책자. 브랜드 스토리와 제품 정보를 담은 소책자형 인쇄물입니다.",
+    "description": "브랜드 리얼스토리 책자. 브랜드 스토리와 제품 정보를 담은 소책자형 인쇄물입니다.",
     "source": "https://raraseo.creatorlink.net/index/view/6031952"
   },
   {
@@ -471,7 +471,7 @@ window.PORTFOLIO = [
     "no": 26,
     "id": "6031956",
     "category": "brand",
-    "title": "WONJIN 뷰티그룹 포스터",
+    "title": "뷰티그룹 포스터",
     "subtitle": "포스터",
     "tools": [
       "AI",
@@ -483,7 +483,7 @@ window.PORTFOLIO = [
     "images": [
       "images/6031956-1.jpg"
     ],
-    "description": "WONJIN 뷰티그룹 포스터. 브랜드 라인업과 인물 컷을 결합한 홍보 포스터입니다.",
+    "description": "뷰티그룹 포스터. 브랜드 라인업과 인물 컷을 결합한 홍보 포스터입니다.",
     "source": "https://raraseo.creatorlink.net/index/view/6031956"
   },
   {
@@ -508,7 +508,7 @@ window.PORTFOLIO = [
     "no": 28,
     "id": "6031955",
     "category": "brand",
-    "title": "WONJIN X배너",
+    "title": "뷰티 브랜드 X배너",
     "subtitle": "X배너",
     "tools": [
       "AI",
@@ -519,7 +519,7 @@ window.PORTFOLIO = [
     "images": [
       "images/6031955-1.jpg"
     ],
-    "description": "WONJIN X배너. 매장과 전시 현장에서 쓰이는 스탠딩 배너 디자인입니다.",
+    "description": "뷰티 브랜드 X배너. 매장과 전시 현장에서 쓰이는 스탠딩 배너 디자인입니다.",
     "source": "https://raraseo.creatorlink.net/index/view/6031955"
   }
 ];
