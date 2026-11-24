@@ -925,6 +925,8 @@ body.menu-open .mobile-nav { opacity: 1; visibility: visible; transform: none; }
   :root { --header-h: 64px; }
   .nav { display: none; }
   .menu-toggle { display: block; }
+  /* phones and small tablets: eyebrow above the discipline tags */
+  .hero-top { flex-direction: column; align-items: flex-start; gap: 14px; }
   .hero-lead { font-size: 14px; }
   .grid { gap: 22px 14px; }
   .card-body { padding-top: 12px; gap: 9px; }
@@ -941,7 +943,6 @@ body.menu-open .mobile-nav { opacity: 1; visibility: visible; transform: none; }
   .filters { gap: 18px; }
   .filter { font-size: 11px; letter-spacing: 0.1em; }
   .hero-tags li { font-size: 10px; padding: 6px 12px; }
-  .hero-top { gap: 12px 18px; }
   .hero-visual figcaption { font-size: 9.5px; letter-spacing: 0.1em; padding: 10px 0 0; }
 
   /* motion hero: compact horizontal banner on phones as well */
