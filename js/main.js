@@ -235,6 +235,63 @@
   });
 
   /* ---------------------------------------------------------
+     Hero motion typography (WEB DESIGN ⇄ BRAND DESIGN)
+     --------------------------------------------------------- */
+  var heroStage = $(".hero-motion");
+  if (heroStage) {
+    var hmTrack = $(".hm-track", heroStage);
+    var hmLines = $$(".hm-line", heroStage);
+    var hmIdx = $(".hm-idx", heroStage);
+    var hmWord = $(".hm-word", heroStage);
+    var HM_WORDS = ["WEB", "BRAND"];
+    var HM_INTERVAL = 2800;
+    var hmIndex = 0;
+    var hmTimer = null;
+    var hmReduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    var hmSet = function (next, animate) {
+      if (!hmTrack || !hmLines.length) return;
+      hmIndex = ((next % hmLines.length) + hmLines.length) % hmLines.length;
+      hmTrack.style.transform = "translateY(-" + hmIndex * (100 / hmLines.length) + "%)";
+      hmLines.forEach(function (line, i) {
+        line.classList.toggle("is-active", i === hmIndex);
+      });
+      if (hmIdx) hmIdx.textContent = ("0" + (hmIndex + 1)).slice(-2);
+      if (hmWord) {
+        hmWord.textContent = HM_WORDS[hmIndex] || "";
+        hmWord.classList.remove("is-swap");
+        if (animate) {
+          void hmWord.offsetWidth; // restart the swap animation
+          hmWord.classList.add("is-swap");
+        }
+      }
+    };
+
+    var hmStop = function () {
+      if (hmTimer) { window.clearInterval(hmTimer); hmTimer = null; }
+    };
+
+    var hmStart = function () {
+      hmStop();
+      if (hmReduce.matches) return;
+      hmTimer = window.setInterval(function () {
+        if (document.hidden) return;
+        hmSet(hmIndex + 1, true);
+      }, HM_INTERVAL);
+    };
+
+    hmSet(0, false);
+    hmStart();
+
+    var onMotionPreference = function () {
+      hmSet(0, false);
+      hmStart();
+    };
+    if (hmReduce.addEventListener) hmReduce.addEventListener("change", onMotionPreference);
+    else if (hmReduce.addListener) hmReduce.addListener(onMotionPreference);
+  }
+
+  /* ---------------------------------------------------------
      Header state + active nav
      --------------------------------------------------------- */
   var header = $(".site-header");
