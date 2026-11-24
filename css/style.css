@@ -955,6 +955,8 @@ body.menu-open .mobile-nav { opacity: 1; visibility: visible; transform: none; }
   .hm-word { font-size: 26px; }
   .hm-kw { font-size: 8.5px; letter-spacing: 0.16em; }
   .hm-mq { gap: 10px; padding-right: 10px; }
+  /* phone: each loop keeps the word plus two Korean service keywords */
+  .hm-mq > :nth-child(n + 2):nth-child(-n + 7) { display: none; }
   .hm-mq i { font-size: 8px; }
 }
 
