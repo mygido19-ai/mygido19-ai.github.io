@@ -364,7 +364,7 @@ body.menu-open .mobile-nav { opacity: 1; visibility: visible; transform: none; }
   align-items: start;
 }
 .about h2 {
-  margin: 0;
+  margin: 0 0 26px;
   font-size: clamp(24px, 3vw, 38px);
   line-height: 1.42;
   letter-spacing: -0.03em;
