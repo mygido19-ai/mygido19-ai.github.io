@@ -430,10 +430,11 @@ body.menu-open .mobile-nav { opacity: 1; visibility: visible; transform: none; }
   color: #ffffff;
   font-weight: 600;
 }
+/* BRAND DESIGN reads at the same weight, tracking and tone as WEB DESIGN */
 .hm-row--brand .hm-word {
-  color: #b6c1d2;
-  font-weight: 500;
-  letter-spacing: -0.012em;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: -0.03em;
 }
 
 .hm-kw {
