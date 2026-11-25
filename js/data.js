@@ -6,6 +6,7 @@ window.PORTFOLIO = [
     "category": "web",
     "title": "프로모션 앱 배너",
     "subtitle": "이벤트 앱 배너",
+    "participation": "100%",
     "thumb": "images/thumb-01.jpg",
     "images": [
       "images/6070111-1.jpg"
@@ -19,6 +20,7 @@ window.PORTFOLIO = [
     "category": "web",
     "title": "인스타그램 이미지",
     "subtitle": "SNS 콘텐츠",
+    "participation": "100%",
     "thumb": "images/thumb-02.jpg",
     "images": [
       "images/6068246-1.jpg"
@@ -32,6 +34,7 @@ window.PORTFOLIO = [
     "category": "web",
     "title": "쿨링 케어 마사지 젤 상세페이지",
     "subtitle": "상세페이지",
+    "participation": "100%",
     "thumb": "images/thumb-03.jpg",
     "images": [
       "images/6067897-1.jpg"
@@ -45,6 +48,7 @@ window.PORTFOLIO = [
     "category": "web",
     "title": "스킨케어 상세페이지 모음",
     "subtitle": "상세페이지",
+    "participation": "100%",
     "thumb": "images/thumb-04.jpg",
     "images": [
       "images/6031743-1.jpg"
@@ -58,6 +62,7 @@ window.PORTFOLIO = [
     "category": "web",
     "title": "외부몰 기획전 이미지",
     "subtitle": "외부몰 기획전",
+    "participation": "100%",
     "thumb": "images/thumb-05.jpg",
     "images": [
       "images/6031764-1.jpg"
@@ -71,6 +76,7 @@ window.PORTFOLIO = [
     "category": "web",
     "title": "일본 Qoo10 이미지",
     "subtitle": "일본 큐텐",
+    "participation": "100%",
     "thumb": "images/thumb-06.jpg",
     "images": [
       "images/6031752-1.jpg"
@@ -84,6 +90,7 @@ window.PORTFOLIO = [
     "category": "web",
     "title": "네이버 기획전",
     "subtitle": "외부몰 기획전",
+    "participation": "100%",
     "thumb": "images/thumb-07.jpg",
     "images": [
       "images/6031765-1.jpg"
@@ -97,6 +104,7 @@ window.PORTFOLIO = [
     "category": "web",
     "title": "SNS 이미지",
     "subtitle": "인스타그램",
+    "participation": "100%",
     "thumb": "images/thumb-08.jpg",
     "images": [
       "images/6031767-1.jpg"
@@ -110,6 +118,7 @@ window.PORTFOLIO = [
     "category": "web",
     "title": "앰플 상세페이지",
     "subtitle": "상세페이지",
+    "participation": "100%",
     "thumb": "images/thumb-09.jpg",
     "images": [
       "images/6031766-1.jpg"
@@ -123,6 +132,7 @@ window.PORTFOLIO = [
     "category": "web",
     "title": "카페24 자사몰 메인 리뉴얼",
     "subtitle": "자사몰 메인",
+    "participation": "100%",
     "thumb": "images/thumb-10.jpg",
     "images": [
       "images/6031811-1.jpg"
@@ -136,6 +146,7 @@ window.PORTFOLIO = [
     "category": "web",
     "title": "샴푸 상세페이지",
     "subtitle": "상세페이지",
+    "participation": "100%",
     "thumb": "images/thumb-11.jpg",
     "images": [
       "images/6031748-1.jpg"
@@ -149,6 +160,7 @@ window.PORTFOLIO = [
     "category": "web",
     "title": "이벤트 페이지",
     "subtitle": "이벤트 페이지",
+    "participation": "100%",
     "thumb": "images/thumb-12.jpg",
     "images": [
       "images/6031801-1.jpg"
@@ -162,6 +174,7 @@ window.PORTFOLIO = [
     "category": "web",
     "title": "다이어트 프로모션 이벤트",
     "subtitle": "이벤트 페이지",
+    "participation": "100%",
     "thumb": "images/thumb-13.jpg",
     "images": [
       "images/6031769-1.jpg"
@@ -175,6 +188,7 @@ window.PORTFOLIO = [
     "category": "web",
     "title": "자동 거꾸로 우산 상세페이지",
     "subtitle": "상세페이지",
+    "participation": "100%",
     "thumb": "images/thumb-14.jpg",
     "images": [
       "images/6031770-1.jpg",
@@ -191,6 +205,7 @@ window.PORTFOLIO = [
     "category": "web",
     "title": "듀얼 선스틱 특가 이벤트",
     "subtitle": "이벤트 페이지",
+    "participation": "100%",
     "thumb": "images/thumb-15.jpg",
     "images": [
       "images/6031771-1.jpg"
@@ -204,6 +219,7 @@ window.PORTFOLIO = [
     "category": "web",
     "title": "프로모션 배너 이미지",
     "subtitle": "배너 이미지",
+    "participation": "100%",
     "thumb": "images/thumb-16.jpg",
     "images": [
       "images/6031805-1.jpg",
@@ -219,6 +235,7 @@ window.PORTFOLIO = [
     "category": "web",
     "title": "콘텐츠 페이지 디자인",
     "subtitle": "컨텐츠 페이지",
+    "participation": "100%",
     "thumb": "images/thumb-17.jpg",
     "images": [
       "images/6031809-1.jpg"
@@ -232,6 +249,7 @@ window.PORTFOLIO = [
     "category": "web",
     "title": "모바일 프로모션 페이지",
     "subtitle": "SNS 이미지",
+    "participation": "100%",
     "thumb": "images/thumb-18.jpg",
     "images": [
       "images/6031807-1.jpg",
@@ -246,6 +264,7 @@ window.PORTFOLIO = [
     "category": "brand",
     "title": "신세계백화점 팝업 VMD",
     "subtitle": "VMD",
+    "participation": "100%",
     "thumb": "images/thumb-19.jpg",
     "images": [
       "images/6031946-1.jpg"
@@ -259,6 +278,7 @@ window.PORTFOLIO = [
     "category": "brand",
     "title": "브랜드 리플렛",
     "subtitle": "리플렛",
+    "participation": "100%",
     "thumb": "images/thumb-20.jpg",
     "images": [
       "images/6031947-1.jpg"
@@ -272,6 +292,7 @@ window.PORTFOLIO = [
     "category": "brand",
     "title": "제품 홍보물",
     "subtitle": "홍보물",
+    "participation": "100%",
     "thumb": "images/thumb-21.jpg",
     "images": [
       "images/6031948-1.jpg"
@@ -285,6 +306,7 @@ window.PORTFOLIO = [
     "category": "brand",
     "title": "온·오프라인 홍보물",
     "subtitle": "홍보물",
+    "participation": "100%",
     "thumb": "images/thumb-22.jpg",
     "images": [
       "images/6031951-1.jpg"
@@ -298,6 +320,7 @@ window.PORTFOLIO = [
     "category": "brand",
     "title": "브랜드 스토리 책자",
     "subtitle": "책자",
+    "participation": "100%",
     "thumb": "images/thumb-23.jpg",
     "images": [
       "images/6031952-1.jpg",
@@ -314,6 +337,7 @@ window.PORTFOLIO = [
     "category": "brand",
     "title": "3단 리플렛",
     "subtitle": "리플렛",
+    "participation": "100%",
     "thumb": "images/thumb-24.jpg",
     "images": [
       "images/6031958-1.jpg",
@@ -328,6 +352,7 @@ window.PORTFOLIO = [
     "category": "brand",
     "title": "사내 사보",
     "subtitle": "사보",
+    "participation": "100%",
     "thumb": "images/thumb-25.jpg",
     "images": [
       "images/6031954-1.jpg",
@@ -345,6 +370,7 @@ window.PORTFOLIO = [
     "category": "brand",
     "title": "브랜드 홍보 포스터",
     "subtitle": "포스터",
+    "participation": "100%",
     "thumb": "images/thumb-26.jpg",
     "images": [
       "images/6031956-1.jpg"
@@ -358,6 +384,7 @@ window.PORTFOLIO = [
     "category": "brand",
     "title": "일본 전시 부스 백월",
     "subtitle": "백월",
+    "participation": "100%",
     "thumb": "images/thumb-27.jpg",
     "images": [
       "images/6031950-1.jpg"
@@ -371,6 +398,7 @@ window.PORTFOLIO = [
     "category": "brand",
     "title": "X배너 디자인",
     "subtitle": "X배너",
+    "participation": "100%",
     "thumb": "images/thumb-28.jpg",
     "images": [
       "images/6031955-1.jpg"

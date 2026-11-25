@@ -129,7 +129,11 @@
   var currentIndex = -1;
 
   function buildMeta(p) {
-    return "<div><dt>TYPE</dt><dd>" + p.subtitle + "</dd></div>";
+    return (
+      "<div><dt>Category</dt><dd>" + CATS[p.category] + "</dd></div>" +
+      "<div><dt>Type</dt><dd>" + p.subtitle + "</dd></div>" +
+      "<div><dt>Participation</dt><dd>" + p.participation + "</dd></div>"
+    );
   }
 
   function openModal(index) {
