@@ -667,7 +667,6 @@ body.menu-open .mobile-nav { opacity: 1; visibility: visible; transform: none; }
   text-transform: uppercase;
   color: var(--muted);
 }
-.card-cat { color: var(--navy-soft); }
 
 /* ============================================================
    Footer
@@ -753,13 +752,6 @@ body.menu-open .mobile-nav { opacity: 1; visibility: visible; transform: none; }
   line-height: 1.35;
   letter-spacing: -0.025em;
   font-weight: 700;
-}
-.modal-sub {
-  margin: 6px 0 0;
-  font-size: 12px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
 }
 .modal-close {
   flex: none;
@@ -956,8 +948,8 @@ body.menu-open .mobile-nav { opacity: 1; visibility: visible; transform: none; }
   .hm-word { font-size: 26px; }
   .hm-kw { font-size: 8.5px; letter-spacing: 0.16em; }
   .hm-mq { gap: 10px; padding-right: 10px; }
-  /* phone: each loop keeps the word plus two Korean service keywords */
-  .hm-mq > :nth-child(n + 2):nth-child(-n + 7) { display: none; }
+  /* phone: each loop keeps the word plus the first two service keywords */
+  .hm-mq > :nth-child(n + 6) { display: none; }
   .hm-mq i { font-size: 8px; }
 }
 

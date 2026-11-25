@@ -31,7 +31,7 @@
           '<div class="card-body">' +
             "<div>" +
               '<h3 class="card-title">' + p.title + "</h3>" +
-              '<p class="card-sub"><span class="card-cat">' + CATS[p.category] + "</span> · " + p.subtitle + "</p>" +
+              '<p class="card-sub">' + p.subtitle + "</p>" +
             "</div>" +
           "</div>" +
         "</button>" +
@@ -119,7 +119,6 @@
   var modalImages = $(".modal-images", modal);
   var modalTitle = $("#modalTitle");
   var modalCat = $(".modal-cat", modal);
-  var modalSub = $(".modal-sub", modal);
   var modalDesc = $(".modal-desc", modal);
   var modalMeta = $(".modal-meta", modal);
   var btnPrev = $("[data-prev]", modal);
@@ -130,12 +129,7 @@
   var currentIndex = -1;
 
   function buildMeta(p) {
-    return (
-      "<div><dt>Category</dt><dd>" + CATS[p.category] + "</dd></div>" +
-      "<div><dt>Type</dt><dd>" + p.subtitle + "</dd></div>" +
-      "<div><dt>Tools</dt><dd>" + p.tools.join(" · ") + "</dd></div>" +
-      "<div><dt>Participation</dt><dd>" + p.participation + "</dd></div>"
-    );
+    return "<div><dt>TYPE</dt><dd>" + p.subtitle + "</dd></div>";
   }
 
   function openModal(index) {
@@ -145,7 +139,6 @@
 
     modalTitle.textContent = p.title;
     modalCat.textContent = CATS[p.category];
-    modalSub.textContent = p.subtitle;
     modalDesc.textContent = p.description;
     modalMeta.innerHTML = buildMeta(p);
     modalImages.innerHTML = p.images
