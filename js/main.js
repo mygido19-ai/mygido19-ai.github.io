@@ -20,6 +20,13 @@
   var activeFilter = "all";
   var visibleProjects = projects.slice();
 
+  /* ALL tab opens with this many works; the rest sit behind "작업물 더보기" */
+  var INITIAL_COUNT = 9;
+  var expanded = false;
+  var moreWrap = $("#workMore");
+  var moreBtn = $("#moreBtn");
+  var moreCount = $("[data-more-count]");
+
   function cardHTML(p) {
     return (
       '<article class="card reveal" data-category="' + p.category + '" data-id="' + p.id + '">' +
@@ -46,8 +53,18 @@
   }
 
   /* ---------------------------------------------------------
-     Filtering
+     Filters + "작업물 더보기" paging
      --------------------------------------------------------- */
+  function remainingCount() {
+    return Math.max(projects.length - INITIAL_COUNT, 0);
+  }
+
+  function revealCard(card, immediate) {
+    if (card.classList.contains("is-in")) return;
+    if (immediate) card.classList.add("is-in");
+    else window.requestAnimationFrame(function () { card.classList.add("is-in"); });
+  }
+
   function applyFilter(cat, immediate) {
     activeFilter = cat;
     visibleProjects = projects.filter(function (p) {
@@ -60,20 +77,29 @@
       btn.setAttribute("aria-pressed", on ? "true" : "false");
     });
 
-    $$(".card", grid).forEach(function (card) {
-      var show = cat === "all" || card.dataset.category === cat;
-      if (show) {
-        card.classList.remove("is-hidden");
-        if (immediate) {
-          card.classList.remove("is-hiding");
-          card.classList.add("is-in");
-        } else {
-          card.classList.remove("is-hiding");
-        }
-      } else {
-        card.classList.add("is-hidden");
+    // paging applies to ALL only, and only until the visitor expands it
+    var paged = cat === "all" && !expanded && remainingCount() > 0;
+
+    $$(".card", grid).forEach(function (card, i) {
+      var inCat = cat === "all" || card.dataset.category === cat;
+      var beyond = paged && i >= INITIAL_COUNT;
+      card.classList.toggle("is-paged", inCat && beyond);
+      card.classList.toggle("is-hidden", !inCat);
+      if (inCat && !beyond) {
+        card.classList.remove("is-hiding");
+        revealCard(card, immediate);
       }
     });
+
+    if (moreWrap) {
+      moreWrap.hidden = !paged;
+      moreWrap.classList.remove("is-fading");
+    }
+    if (moreBtn) {
+      moreBtn.disabled = false;
+      moreBtn.setAttribute("aria-expanded", expanded ? "true" : "false");
+    }
+    if (moreCount) moreCount.textContent = "+" + remainingCount();
 
     updateNav();
   }
@@ -84,6 +110,43 @@
       applyFilter(btn.dataset.filter, false);
     });
   });
+
+  /* ---------------------------------------------------------
+     Show more: reveal the remaining works once, then retire
+     --------------------------------------------------------- */
+  if (moreBtn) {
+    moreBtn.addEventListener("click", function () {
+      if (expanded) return;
+      expanded = true;
+      moreBtn.disabled = true;
+      moreBtn.setAttribute("aria-expanded", "true");
+      if (moreWrap) moreWrap.classList.add("is-fading");
+
+      var fresh = $$(".card.is-paged", grid);
+
+      fresh.forEach(function (card) { card.classList.remove("is-paged"); });
+      // commit the hidden start state before revealing, so the fade actually runs
+      void grid.offsetHeight;
+
+      fresh.forEach(function (card, i) {
+        if (card.classList.contains("is-in")) return;
+        var delay = Math.min(i, 14) * 42;
+        card.style.transitionDelay = delay + "ms";
+        card.classList.add("is-in");
+        window.setTimeout(function () { card.style.transitionDelay = ""; }, 950 + delay);
+      });
+
+      window.setTimeout(function () {
+        if (moreWrap) {
+          moreWrap.hidden = true;
+          moreWrap.classList.remove("is-fading");
+        }
+        moreBtn.disabled = false;
+        var firstCard = fresh[0] && $(".card-btn", fresh[0]);
+        if (firstCard) firstCard.focus({ preventScroll: true });
+      }, 260);
+    });
+  }
 
   /* ---------------------------------------------------------
      Reveal on scroll
